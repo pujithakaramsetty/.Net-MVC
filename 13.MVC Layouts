@@ -1,2 +1,113 @@
 Ado.net entity framework works as intermediate between ASP.Net MVC Application and Database in SQL server.
 -->Master pages for mvc is layout 
+
+ In this video, we’re going to talk about ASP.NET MVC layouts. Today, we’ll go over how to design layouts for MVC apps. Layouts are basically like master pages in ASP.NET. 
+We'll look at how to set up a master page for an MVC app and how to configure it. In MVC, we refer to master pages as layouts. So, how do we create these layouts? They usually have 
+a .cshtml extension, and that’s the key.
+
+A layout component is where the main content of your page gets displayed. The `RenderBody` function is used to specify where that content goes. If you want to create different sections
+in your layout page, you can do that with `RenderSection`. Think of layouts like master pages in ASP Web Forms. In MVC, layouts use the .cshtml extension. The key parts of a layout are 
+`RenderBody` and `RenderSection`. `RenderBody` tells where the content should show up, and you can define multiple areas within the layout as needed.
+
+To get things rolling, we need to set up different areas using the render section. To use the sections you've defined on your pages, you'll need to pull in the components from the Nate
+section. To see if the section is working, we have to check the function properties section. These are some properties and functions we usually rely on when designing a layout page. 
+So, let’s dive into how to create a layout for our MVC app and go over the key concepts related to layouts.
+
+"Alright, let’s switch over to Visual Studio and add a layout page. If you’re adding a page that needs to be accessed from any controller, we should put it in a special folder in the 
+views. I’m going to create a new folder and call it 'Shared.' We know that the Shared folder in views allows any resources you put there to be accessed from any controller. So, if you 
+want something to be available globally, that’s the way to do it."
+
+I'm adding a new view to the shade folder, and it's an MVC view that I'm calling "_site" – you can name it whatever you want. Typically, partial views and layouts have an underscore 
+prefix. I'm naming the layout "site," which is fine. Now, we'll uncheck the option to use a layout page since this page itself is a layout, so we won't be using any layout page for now.
+
+
+
+span as - I'm marching and I will put the heading nourish ID ok Hyderabad fine now below this I will add another row in the row we have two cells in the left cell and the right cell 
+so the table contains two rows initially the top row and the middle row and for the middle row I will put height is some 300 pixels and bottom I will add another row in that we will 
+have a cell and here we will put some copyright copy right 2018 yeah and some details like some faculty so like courses so projects okay some development something now we
+
+have a table with 3 rows defined in the three rows we are configuring the table row 1 2 & 3 we are configuring a header and we are defining a footer in this table row we will use the 
+left cell with the menu let's add an odd unordered list and put some list item we will define some hyperlinks HTML dot action link I will put the link text as home and it needs to go
+to an action called home fine okay another I will put another link I will say HTML dot action link as about about that is the link text and I will
+
+use about fine I will add another list item at the net HTML dot action link then contact and contact okay three hyperlinks are defined home about in contact so let's put the total 
+table width here table width as some 800 pixels fine and here the left cell width I will define as 250 pixel fine and I will define the right cell here as with 550 pixel that's fine 
+so we have two columns in the middle row so left we have a menu for home about and contact and the contents of home about and contact must be displayed in the right
+
+panel inside this cell that means in this right cell I have to render the contents then just I have to define a function here render body so render body is a function that specifies 
+where the page contents must be rendered okay after configuring the page let's put some spice here I will set the style for the header rope rope this style will use some background color
+so background color let's put the background color as gray dark slate gray yeah and let's put some color as white fine and the bottom
+
+row also I will put a style and let's make the text alignment to Center text align to center the same effect I will define for the footer also so style so background color let's put
+so dark slate gray or some green and I say color to white and text align to Center fine after designing the page actually our intention of the UI is to display a header and a footer and 
+in the middle two columns left we have a panel for navigation and right we are rendering the content so this render body defines where your page content
+
+must be rendered okay once the initial layout is ready there are several more things to update into this layout once the initial layout is ready let's apply this layout to our pages
+how so let's go to the controllers and add a controller here I will select the controller name as home controller so in this home controller we will define some actions the first action
+is home okay and another action action result is about okay it should return a view and let's add another action contact action result
+
+contact okay let's return a view fine now let's add the views so that they can use the layout that we design so I'm adding the view right click and add view so the view is an empty 
+view your name is and here it is prompting for use a layout page so select use layout page and you choose which layout piece to apply our layout page is in views shared that is site
+dot c sh t ml we are applying that then add now a view is added for home once the view is added for home you can put any content here let's copy some
+
+content and put in the home page so just i will copy a paragraph and I will put that paragraph information here fine now we will go to the controller about and home controller about 
+add a view and it's also an empty and use the same layout page add and here I will define about and some paragraph information here again okay let's just first a change reducing this 
+about related content there fine let's add one more here now here another question is how we can apply a layout to a view that is not using a layout
+
+initially means I will add a view for contact while adding the view I am NOT selecting a layout page so that means when I add this it is not going to use the layout page if you are
+trying to use the layout page then what you have to do is simple you have to use at the niche so a attribute layout is equal to what's the layout page you want to apply till / view slash
+shared slash underscore site dot CSS HTML so this is the page that we want to use as layout and put a header here and I say contact us okay and here
+
+I want to display some address some address information so HR add some nourish ID coding something so if the layout is not initially defined you can Delta apply the layout just by 
+configuring the attribute layout now let's start and see how this works we will start with the index page so we designed a layout and we are using the same layout for all the pages home 
+about and contact these are all the actions that are going to use the same layout so a uniform appearance across the pages there are several more options to
+
+discuss about the layouts that we will see after achieving the primary goal right so first we will apply a simple layout for all our pages and see what we can implement into this layout 
+you can see now this is the layout page defined so we will make the footer span everywhere then just go to the site and the footer this cell we will put call span to two and you can see 
+the footer will merge to the two columns okay that's fine and now when user clicks on about it gets the about and contact so we just designed a simple
+
+layout for our MVC application so user takes on home and about and contact it gets that information and display so this is a simple example of how we design a layout for MBC now what 
+else you can configure in a layout what are the various options to know about layout that we will discuss in our next video .
+
+
+
+
+### Summary
+In this video session from Nourish Technologies, the presenter elaborates on designing layouts for ASP.NET MVC applications, comparing layouts to ASP.NET master pages. The video begins with an overview of the layout structure, emphasizing key components like the `RenderBody` and `RenderSection` functions. The presenter details the process of creating a layout page, including its placement in the shared folder for accessibility across controllers. Using Visual Studio, a demonstration follows where a new layout page is created, named `site.cshtml`, featuring a header, navigation menu, and footer. The presenter explains how to integrate this layout into various views, ensuring uniformity across the application. Moreover, the video touches on applying layouts dynamically to views that initially do not use them. The session concludes with a demonstration of how to modify the footer to span across columns and hints at more advanced layout configurations to be covered in future videos.
+
+### Highlights
+- 🎨 **Understanding Layouts**: Layouts in ASP.NET MVC serve a similar purpose to master pages in ASP.NET Web Forms, providing a consistent structure across views.
+- ⚙️ **Key Functions**: The `RenderBody` function specifies where content is rendered, while `RenderSection` allows for defining multiple areas within a layout.
+- 🗂️ **Shared Folder Usage**: A special folder named "shared" is created to store the layout page, making it accessible across various controllers and actions.
+- 🛠️ **Building the Layout**: The video walks through the design process of a layout page, including creating a table structure for navigation and content rendering.
+- 📄 **Integrating Views**: The presenter demonstrates how to apply the newly created layout to different views using Visual Studio, ensuring a uniform appearance.
+- ✏️ **Dynamic Layout Application**: The video shows how to apply a layout to views that do not initially use one by dynamically setting the layout attribute.
+- 📅 **Future Discussions**: The session ends with a promise of further exploration into advanced layout features in upcoming videos.
+
+### Key Insights
+- 📚 **Layouts as Structural Templates**: Layouts in ASP.NET MVC function as templates that provide a common structure for web pages. They help maintain a consistent user experience 
+across different parts of an application, similar to traditional master pages in ASP.NET Web Forms. This structural approach allows developers to focus on the unique content of each
+page while relying on a standardized design framework.
+
+- 🔄 **RenderBody and RenderSection Functions**: The `RenderBody` function is critical in defining where the content of a specific view will be displayed within the layout. 
+Conversely, `RenderSection` allows developers to create additional customizable areas in a layout for more complex designs. These functions provide flexibility and modularity, 
+enabling developers to easily adjust the layout as needed.
+
+- 🌐 **Shared Folder for Reusability**: By placing layout files in the "shared" folder, developers can ensure that these resources are accessible across all controllers and views 
+in the application. This promotes reusability and reduces duplication, thus streamlining the development process and enhancing maintainability.
+
+- 📐 **Designing with HTML and CSS**: The video illustrates the importance of front-end design skills, showing how to use HTML tables and CSS styles to create a visually appealing
+layout. By customizing the layout's look through CSS properties, developers can enhance user engagement and improve the overall aesthetic of the application.
+
+- 🧩 **Integrating Functionalities into Views**: The presenter highlights how to connect various views to the layout, demonstrating the integration of multiple actions within the 
+MVC framework. This ensures that user interactions with the application yield consistent and expected results, reinforcing the importance of a unified layout.
+
+- ⚙️ **Dynamic Layout Application**: The ability to apply layouts dynamically to views that do not initially use them is a powerful feature of MVC. By utilizing the attribute layout 
+setting, developers can easily incorporate existing layout designs into new views, thus ensuring consistency without the need for extensive rewrites.
+
+- 🚀 **Future Enhancements and Features**: The promise of exploring more advanced features related to layouts in future videos indicates a commitment to continuous learning and
+development. This suggests that the concepts introduced are foundational, with deeper functionalities available for developers looking to enhance their applications further.
+
+The video effectively demystifies the process of designing layouts in ASP.NET MVC applications, providing practical examples and insights that developers can leverage in their projects.
+By understanding the foundational concepts of layouts, developers can create more structured, maintainable, and visually appealing web applications.
+
