@@ -152,3 +152,98 @@ and exploring the expansive capabilities of the framework, fostering an ongoing 
 Overall, this video serves as a comprehensive guide for developers looking to deepen their understanding of layout management in ASP.NET MVC applications. By leveraging the discussed 
 techniques and principles, developers can create more dynamic, user-friendly, and maintainable web applications.
 
+
+
+[Music] hello welcome to nourish technologies this is sadaqa Sharma we are continuing our asp.net MVC video sessions and in the previous topic we discussed about how do we handle
+layouts for MVC application so in our previous video session we learnt what is a layout how do we create a layout and how do we use the layout for our pages now let's see some more 
+extensions to that layout so I will give a glance and if you are new to this video you can watch the previous video where we detailee discussed about
+
+layouts in a our project we added a folder called shared into views and into shared folder we added a view underscore site dot CS HTML and in this view we designed a UI so this UI
+is for accessing and displaying the details the same UI will be used for the entire application so that the appearance will be uniform so what we designed in this UI let's run this and 
+see actually in the previous video session we have seen how to create a controller and with actions home about end contact we added views for home about and contact
+
+in these views we have implemented the layout so that whenever the page is rendered it will use the layout and put the contents within the layout defined so let's run this and see 
+initially how the layout looks like and we will also observe what additional functionality is to perform yeah this is the page that we design a layout and a navigation with the home
+about and contact so we are using the same layout for entire application now let's see what's the additional functionalities that we can define
+
+actually so we learnt about a function render body this indicates the location where the resulting markup must be rendered now if I want to render multiple sections in a page how to
+define multiple sections in a page that means I want to customize the head section so that I can later add scripts styles individually for every page then how we can make the head 
+section customizable in every page so generally in a speed or net waveforms you have content placeholders you can use as many as content placeholders you
+
+want in the body or in the head section now in MVC the render body function defines where the body content should be rendered the additional sections are defined by using render section
+so render section is a function which is used to define the additional sections to be implemented and customized in your page how to configure these additional sections for example 
+see I will go to the layout page our layout pages side dot CS HTML in this layout page so already in the body section we are implementing this render body now I want
+
+the head section also to be customized then what we will do is here in the head section we will use a function render section and I will define a name for the section section name is
+some head section okay now this head section whatever you define is mandatory to implement if you want this section as an optional section to be implemented then you can use an required
+attribute and set it to so false it's a boolean property that means required false indicates that this is an optional section so to be
+
+implemented if you want you can implement this section so what I want to do is when user invokes about page so in the about page I want to implement that header section head section
+so how do we implement the sections that means about page needs some Styles about page needs some scripts that are to be rendered in the head section of the page then how you can render 
+that already we have an area for head section defined with the render section and the section name is head okay now let's go to the about page and how to implement
+
+the sections that you have defined in layout to implement any section that is defined in the layout we have to use a function we have to use section section and what is that section name
+the section name is head section and to implement that head section we need to configure the functionality as a block so what you want to render in that head section you have to define 
+that here so I will put a Spile in the style I will define a heading two and wherever that heading two is there we will define some
+
+background color so as some blue and some color as white and text align to centered yeah now at the same time in the head section I want to implement some script and this script should
+show a basic alert alert so alert displaying so about about nourish ID okay that's a general script defined so our intention is the section with head defined in this about page will
+contain two elements one a script and style these elements are rendered in the head section defined so where the head section is defined you
+
+can see in layout page the head section is defined in the page head area so whatever you defined in about so through this section element so it is going to render everything inside
+the head section of the page let's run this and see that means we defined a head section and we are implementing the styles and scripts into that head section let's see I will run 
+the page again here okay and let's see home page is not implementing the head section because we made the head section as optional by specifying
+
+required as false that means it's not mandatory to implement that section in every page so only about page is implementing that head section by adding some extra styles and script you 
+can observe that the home page that is rendered is not using any head section is not implementing any head section so home is normal but when I go to contact still contact is also not
+implementing but when I go to about it shows an alert about nourish ID and I say ok and you can see the styles are affected let's go to the source right
+
+click and view page source you can observe that the styles and scripts are exactly rendered in the head section of the page that means our view is using lay out and into the layout we
+are implementing the head section so where we rendered styles and scripts so if you want to define multiple sections in a page you can do that so by using a function render section 
+let's implement another section and see for example I will go to the design in the design wherever the body is rendered here I will take I will
+
+remove this and I will put it do and this view will have an height style put height as we will define the height as 200 pixels 200 pixel is the height fine in this div we will use the
+Trender body write render body is defined in the do okay and I am adding another do below this and in this deal I will put style so height height as 100 pixels because overall the height of our row is 300 we will define hundred pixels for the height now very important is this is the area where I want to render some advertisements some ads to
+
+be rendered there so how we can render advertisements means how we can define a section here so that I can use that section for rendering advertisements and every page will not implement that ads area so in that case we will use render section and we define as ads section and we will make required as false so it is not mandatory to implement that section and if any page has to implement this section how it will implement let's see let's go to the contact page in contact page I want to implement that
+
+advertisements area so we have to use a helper section and the section name is adds sexing okay add section has to use a simple image s VAR c is equal to so we will put some images in 
+images I will put images into images we will add some Pepsi Pepsi dot jpg and with width so we will use the width of the same defined for that do actually the width is 550 pixels so I
+will make that width as as some 400 pixels okay then height I will just set the height 200 F fine and one more is I will put this do in a deal
+
+with align to Center and I will add that image into that area that means we are implementing an advertisement section where we are displaying the advertisements so I will add a new 
+folder into this project so that advertisement to show so I will add a new folder called images into the folder we will add some existing item and I have some images related to 
+advertisements we will add that image here so a Pepsi or relents okay that's the path defined here so we are accessing and using that image okay now
+
+similarly in the home page also I want to implement that advertisement section so it's not mandatory to implement in every location so if I want to implement then I will use section 
+and section name is add section and here I need to keep a do with align to center and in the do I will put an image source as the images yeah in the images we will put our digital dot
+jpg so width is some 400 and height is 100 fine now we will set in contact also the image path search l / images and all that fine so we designed
+
+two sections in our layout one is head another one is advertisements so important is it's not mandatory to implement only two pages are implementing this ads section one is home another
+one is contact let's see how that displace let's start with the start with the home page yeah you can see the home page is implementing that advertisement section and about is not
+implement that section so about is not having that advertisement area contact is implementing and it is having that definition now here one more
+
+important point is if any page is not implementing that section you can verify whether that section is implemented or not if not then you can put some alternative content for example
+about is not implementing that section if it is not implementing the section you can put some alternative content instead of what they haven't defined right so then what you can do is
+you can go to the layout page and this ad section is not mandatory to implement if they implemented that whatever configuration they defined it will be used else we can
+
+put some default content but first we have to know whether it is implemented or not how do we know whether that section is implemented or not we have to use a condition so let's use
+a condition so I will make it required to false okay fine now I will remove this I will remove this and I will check a condition here if there is a property so is section defined so 
+which section defined you have to define that section so section is a adds section if the section is defined called adds section right if the
+
+section is defined it has to render that section else if the section is not defined then what we will do is we will put an alternative content and we will just put some align to Center
+and here I will put an option here saying that I will put a simple italicized saying that adds adds here right that means we are verifying whether the section is implemented or not if
+the section is implemented then whatever they configure it will be rendered if section is not implemented then we will put some default contact so
+
+that you can manage by verifying whether the section is defined or not so you can do that by using the function each section define it returns boolean true false if the section is 
+defined it will implement else it will use an alternative content there let's see now let's go to the home page home page is implementing the section contact page is also implementing
+the section and about is not implementing the section then let's see what happens if a section is not implemented so home is implementing contact is also
+
+implementing in about we are not implementing then you can see an alternative comes here that means we can verify whether the section defined or not and we can render that alternative
+content so three important options we have to know how to render the body how do we render the section and how do we acts implement the section by using the helper section and how do 
+we verify whether the section is defined or not is section define this is a boolean function which verifies whether the section defined or not so we
+
+can implement multiple sections in a layout by using render section and section helpers so this is how we can design a layout and we can define multiple sections into the layout so
+this is the complete scenario of working with layouts in MVC in the next session we will discuss about how do we handle the views thank you [Music]
+
+
