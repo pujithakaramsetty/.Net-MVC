@@ -1,3 +1,4 @@
+===================================================================================ViewData and ViewBag=================================================================================
 Both ViewData and ViewBag are used to pass data from a controller to a view. ViewData is a dictionary of objects that are stored and retrieved using strings as keys. 
 The syntax of ViewData is very similar to that of ViewState, SessionState and ApplicationState.
 // Storing data in ViewData
@@ -22,3 +23,12 @@ Internally ViewBag properties are stored as name/value pairs in the ViewData dic
 
 Please Note: To pass data from controller to a view, It's always a good practice to use strongly typed view models instead of using ViewBag & ViewData. Strongly typed view models  provide
 compile time error checking.
+
+
+
+
+
+
+
+
+
