@@ -29,6 +29,8 @@ compile time error checking.
 ->In views,created employee folder and Details View .
 ===========================================================Generate hyperlinks using actionlink html helper==========practice this=======================================================
 ->continuation from above ,create another action method name "Index" in Employeecontroller.
+===========================================================Working with multiple tables in mvc===============================================================
+
 
 
 
