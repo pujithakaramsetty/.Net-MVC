@@ -24,9 +24,11 @@ Internally ViewBag properties are stored as name/value pairs in the ViewData dic
 Please Note: To pass data from controller to a view, It's always a good practice to use strongly typed view models instead of using ViewBag & ViewData. Strongly typed view models  provide
 compile time error checking.
 
-->in models created Employees.cs and created empty properties using get,set .
-->In controller,EmployeeController created ,Details action method in that method initialized values that are created as properties in model class.
-->In views,created employee folder and Details View
+->In models created Employees.cs and created empty properties using get,set .
+->In controller,EmployeeController created ,Details action method in that method created employeecontext object.
+->In views,created employee folder and Details View .
+===========================================================Generate hyperlinks using actionlink html helper==========practice this=======================================================
+->continuation from above ,create another action method name "Index" in Employeecontroller.
 
 
 
