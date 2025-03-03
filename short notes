@@ -31,7 +31,57 @@ compile time error checking.
 ->continuation from above ,create another action method name "Index" in Employeecontroller.
 ===========================================================Working with multiple tables in mvc===============================================================
 
+ ASP.NET MVC (Model-View-Controller),  the main concepts should learn:
 
+### 1. **MVC Architecture**
+Understand the core architecture and design pattern of MVC, which separates an application into three main components:
+   - **Model:** Represents the application's data and business logic.
+   - **View:** Represents the presentation layer (UI).
+   - **Controller:** Handles user input and interactions, updating the Model and View accordingly.
+
+### 2. **Routing**
+Learn about routing, which is how ASP.NET MVC maps URLs to specific controllers and actions. Understand how to define custom routes and the use of route parameters.
+
+### 3. **Controllers and Actions**
+Controllers are the heart of the MVC framework. Learn how to create controllers and actions, and how actions respond to HTTP requests.
+
+### 4. **Views and Razor Syntax**
+Views are responsible for rendering HTML to the browser. Get familiar with the Razor view engine, which allows you to mix HTML with C# code seamlessly.
+
+### 5. **Models and Data Access**
+Learn about creating models that represent your data. Understand how to interact with databases using Entity Framework or other data access technologies.
+
+### 6. **Scaffolding**
+Scaffolding is a powerful feature that automatically generates code for CRUD (Create, Read, Update, Delete) operations. Learn how to use scaffolding to quickly develop functional applications.
+
+### 7. **Validation and Data Annotations**
+Understand how to validate user input using data annotations and model validation techniques to ensure data integrity.
+
+### 8. **Dependency Injection**
+Learn about dependency injection, a design pattern used to achieve Inversion of Control (IoC) between classes and their dependencies.
+
+### 9. **Session Management and State**
+Understand how to manage user sessions and state, including using cookies and session variables.
+
+### 10. **Authentication and Authorization**
+Learn how to implement user authentication and authorization using ASP.NET Identity or other authentication frameworks.
+
+### 11. **Asynchronous Programming**
+Get familiar with asynchronous programming in ASP.NET MVC, which can improve the performance of your web applications by allowing non-blocking operations.
+
+### 12. **Error Handling and Logging**
+Understand how to handle errors and exceptions, and learn about logging techniques to track and diagnose issues.
+
+### 13. **Unit Testing**
+Learn the basics of unit testing in ASP.NET MVC applications, including creating testable code and using testing frameworks like NUnit or MSTest.
+
+### 14. **RESTful APIs**
+Understand how to create and consume RESTful APIs, which are essential for building modern web applications.
+
+### 15. **Bundling and Minification**
+Learn about bundling and minification techniques to optimize the performance of your web application by reducing the size and number of HTTP requests.
+
+By mastering these concepts, you'll be well-equipped to build robust and efficient web applications using ASP.NET MVC. If you have any specific questions about any of these topics, feel free to ask!
 
 
 
